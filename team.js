@@ -42,7 +42,7 @@ function update() {
     muTable.prepend(muDiv);
   }
   
-  $(".teamrow").on("click", function() {
+  $(".muDiv").on("click", function() {
     sessionStorage.setItem("oppteam", $(this).attr("match"));
     window.location.href = "matchup.html";
   });
