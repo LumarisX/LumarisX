@@ -1,0 +1,75 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            deoxys: {
+              red: '#e06f3a',
+              lightred: '#e8936b',
+              darkred: '#b74e1d',
+              blue: '#50c1d4'
+            }
+          },
+          spacing: {
+            '128': '32rem'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-slate-200">
+  <h1 id="matchName"></h1>
+  <div class="flex flex-row mt-2">
+    <div class="h-screen sticky top-0 basis-1/5 bg-cyan-200 p-1 ml-2 rounded-xl">
+      <button class="shadow-md hover:shadow-md shadow-cyan-600 bg-cyan-300 rounded-full px-3 py-1 m-2">Back</button>
+      <div id="sprites" class="h-auto bg-cyan-300 p-2 m-2 rounded-xl shadow-md hover:shadow-md shadow-cyan-600">
+      </div>
+    </div>
+    <div class="bg-red-200 rounded-xl basis-4/5 mr-2 p-2">
+      <div class="">
+        <div class="items-right">
+          <button class="px-3 py-1 bg-red-400 rounded-full shadow-md shadow-slate-600">Add Matchup</button>
+        </div>
+        <div id="matchups">
+        </div>
+      </div>
+      <div class="rounded-xl bg-red-400 p-2 flex flex-wrap hidden">
+        <div class="m-1 w-full">
+          <label class="bg-red-300 rounded-lg shadow-inner shadow-red-600 px-4 py-1 text-center text-sm">Team Name</label>
+          <input class="w-full bg-red-300 rounded-lg shadow-inner shadow-red-600 px-4 py-1 my-1">
+        </div>
+        <div class="m-1 w-1/2">
+          <label class="bg-red-300 rounded-lg shadow-inner shadow-red-600 px-4 py-1 text-center text-sm">Format</label>
+          <select class="w-full bg-red-300 rounded-lg shadow-inner shadow-red-600 px-4 py-1 my-1">
+            <option value="vgc">VGC</option>
+            <option value="singles">Singles</option>
+            <option value="doubles">Doubles</option>
+            <option value="lc">LC</option>
+          </select>
+        </div>
+        <div class="m-1 w-1/2">
+          <label class="bg-red-300 rounded-lg shadow-inner shadow-red-600 px-4 py-1 text-center text-sm">Ruleset</label>
+          <select class="w-full bg-red-300 rounded-lg shadow-inner shadow-red-600 px-4 py-1 my-1">
+            <option value="nd">NatDex</option>
+            <option value="9">Paldea</option>
+            <option value="8">Galar</option>
+            <option value="7">Alola</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="team.js" type="module"></script>
+  <script src="pokemon.js" type="module"></script>
+  <script src="constructor.js" type="module"></script>
+</body>
+
+</html>

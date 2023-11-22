@@ -1,0 +1,97 @@
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            deoxys: {
+              red: '#CD0C39',
+              lightred: '#e8936b',
+              darkred: '#b74e1d',
+              blue: '01C0DF'
+            }
+          },
+          spacing: {
+            '128': '32rem',
+            '256': '64rem'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-slate-200 h-screen">
+  <div class="sticky top-0 border-b-4 border-slate-400 bg-slate-200">
+    <h1 id="leagueName"></h1>
+  </div>
+  <div class="flex flex-wrap items-center overflow-y-auto">
+    <div class="flex flex-row w-full md:w-128 m-4">
+      <div class="m-1 w-1/2">
+        <div class="bg-slate-400 text-center text-xl text-medium rounded-t-3xl">My Team</div>
+        <table id="myOverview" class="table-auto w-full border-4 border-slate-400 rounded-md">
+          <tr class="bg-slate-400">
+            <th></th>
+            <th></th>
+            <th>Name</th>
+            <th class="statHead"></th>
+          </tr>
+        </table>
+      </div>
+      <div class="m-1 w-1/2">
+        <div class="bg-slate-400 text-center text-xl text-medium rounded-t-3xl">Opponent Team</div>
+        <table id="oppOverview" class="table-auto w-full border-4 border-slate-400">
+          <tr class="bg-slate-400">
+            <th class="statHead">S</th>
+            <th>Name</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="typechartWidget" class="w-fit overflow-auto touch-auto m-4 border-4 border-slate-400">
+      <table class="table-auto">
+        <thead class="">
+          <tr id="typeRow">
+            <th class="sticky left-0 bg-slate-200 border-r-4 border-slate-400 "></th>
+          </tr>
+        </thead>
+        <tbody id="typeData" class="bg-slate-200 border-b-4 border-slate-400">
+        </tbody>
+        <tfoot id="typeSum" class="bg-slate-300">
+        </tfoot>
+      </table>
+    </div>
+    <div id="speedtierWidget" class="table-wrp block m-4 max-h-128 w-full md:w-128 overflow-y-auto border-8 border-slate-400 bg-slate-400">
+      <table class="w-full">
+        <thead class="sticky top-0 bg-slate-200">
+          <tr class="border-b-4 border-slate-400">
+            <th class="text-medium py-2">Name</th>
+            <th class="text-medium py-2">Desc</th>
+            <th class="text-medium py-2">Spe</th>
+          </tr>
+        </thead>
+        <tbody id="speedTiers">
+        </tbody>
+      </table>
+    </div>
+    <div id="coverageWidget" class="m-4 w-fit grid grid-cols-1 md:grid-cols-2 grid-rows-flex border-4 bg-slate-400 gap-1 border-slate-400">
+      <div class="coverageSwitch h-8 w-8 bg-cyan-300 text-xs">My Team</div>
+      <div class="coverageSwitch h-8 w-8 bg-red-300 text-xs hidden">Opp Team</div>
+    </div>
+    <div id="learnsetWidget" class="m-4 max-h-128 overflow-auto w-full md:w-128 border-8 border-slate-400 bg-slate-400">
+    </div>
+  </div>
+  <script src="matchup.js" type="module"></script>
+  <script src="pokemon.js" type="module"></script>
+  <script src="learnsets.js" type="module"></script>
+  <script src="moves.js" type="module"></script>
+  <script src="constructor.js" type="module"></script>
+</body>
+
+</html>

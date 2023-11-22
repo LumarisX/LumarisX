@@ -1,0 +1,59 @@
+- Set as many teams as you want 
+- Parameters
+    - Format
+    - Level 
+    - Abilities
+    - League name
+    - Z/Tera/other captains
+    - Nicknames
+    - Opposing teams
+        - Clear button
+    -How many weeks
+    -Games Due date
+  -Weekly matchups
+    -Win loss
+    -Kills
+    -Opponent
+    
+
+Options
+- Shiny or regular
+- Gen 5 sprites or regular
+
+Developer options? 
+- Manually add or remove pokemon data
+    - reference local json before showdowns
+
+Hall of Records
+- Kill count (all time and per league)
+- League records, playoffs, number of players, etc
+
+Match Up
+- Change forms on the fly
+- Team builder
+    - Leftover numbers 
+- Overview
+- Type matchups
+    - individual and as a set
+- Speed charts
+    - Trick room, tailwind, boosts, unburden, etc.
+    - Represent speed tier as indents?
+- Recommended information 
+    - Moves
+    - Evs
+    -Tera types
+
+Draft selector
+- Random Draft
+- Recommended mons
+- Overview information
+
+Scheduler
+-Time conversion
+
+Server
+- Store teams on server so others can view matchup?
+
+Main page
+- widgets
+  -Upcoming matches

@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deoxys: {
+                            red: '#e06f3a',
+                            lightred: '#e8936b',
+                            darkred: '#b74e1d',
+                            blue: '#50c1d4'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-slate-200"></body>
+    <header class="h-8">
+        <a class="text-auto underline" href="index.html">Home</a>
+    </header>
+    <section class="bg-cyan-100 m-2 rounded-xl p-2 border border-2 border-cyan-200">
+        <p class="bold text-3xl">Teams</p>
+        <ul id="teams" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row overflow-auto h-auto">
+        </ul>
+        <button id="add" class="bg-cyan-300 rounded-full p-2 m-3 shadow-md hover:shadow shadow-cyan-600">Add Team</button>
+    </section>
+    <footer class="h-10">
+        <button id="export">Export</button>
+        <div id="importDiv" style="display: none;">
+            Team Data
+            <input id="teamInput">
+            <button id="import">Import</button>
+        </div>
+    </footer>
+    <script src="leagues.js" type="module"></script>
+    <script src="pokemon.js" type="module"></script>
+</body>
+
+</html>

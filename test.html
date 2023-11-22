@@ -1,0 +1,75 @@
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            deoxys: {
+              red: '#e06f3a',
+              lightred: '#e8936b',
+              darkred: '#b74e1d',
+              blue: '#50c1d4'
+            }
+          },
+          spacing: {
+            '128': '32rem'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-slate-200">
+
+  <div id="coverage">
+    <div class="h-32 w-64 flex border border-slate-400 border-2">
+      <div class="h-full w-fit bg-slate-300">
+        <img src="https://play.pokemonshowdown.com/sprites/gen5/charizard.png" class="sprite">
+      </div>
+      <div>
+        <div class="h-1/2 bg-slate-200 w-auto">
+          <div class="w-full h-fit text-xs bg-slate-300 p-1">Physical</div>
+          <div class="pcoverage grid grid-cols-6 grid-rows-flex p-1 h-auto w-full items-center">
+            <img class="value" src="https://play.pokemonshowdown.com/sprites/types/Dark.png">
+            <img class="value" src="https://play.pokemonshowdown.com/sprites/types/Dragon.png">
+            <img class="value" src="https://play.pokemonshowdown.com/sprites/types/Electric.png">
+            <img class="value" src="https://play.pokemonshowdown.com/sprites/types/Fighting.png">
+            <img class="value" src="https://play.pokemonshowdown.com/sprites/types/Fire.png">
+            <img class="value" src="https://play.pokemonshowdown.com/sprites/types/Flying.png">
+            <img class="value" src="https://play.pokemonshowdown.com/sprites/types/Ghost.png">
+            <img class="value" src="https://play.pokemonshowdown.com/sprites/types/Ground.png">
+            <img class="value" src="https://play.pokemonshowdown.com/sprites/types/Normal.png">
+            <img class="value" src="https://play.pokemonshowdown.com/sprites/types/Rock.png">
+            <img src="https://play.pokemonshowdown.com/sprites/types/Steel.png">
+          </div>
+        </div>
+        <div class="h-1/2 bg-slate-200 w-auto">
+          <div class="w-full h-fit text-xs bg-slate-300 p-1">Special</div>
+          <div class="scoverage grid grid-cols-6 grid-rows-flex p-1 h-auto w-full items-center">
+            <img src="https://play.pokemonshowdown.com/sprites/types/Dragon.png">
+            <img src="https://play.pokemonshowdown.com/sprites/types/Fighting.png">
+            <img src="https://play.pokemonshowdown.com/sprites/types/Fire.png">
+            <img src="https://play.pokemonshowdown.com/sprites/types/Flying.png">
+            <img src="https://play.pokemonshowdown.com/sprites/types/Grass.png">
+            <img src="https://play.pokemonshowdown.com/sprites/types/Normal.png">
+            <img src="https://play.pokemonshowdown.com/sprites/types/Rock.png">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="test.js" type="module"></script>
+  <script src="learnsets.js" type="module"></script>
+  <script src="pokemon.js" type="module"></script>
+  <script src="moves.js" type="module"></script>
+  <script src="data/typechart.js" type="module"></script>
+</body>
+
+</html>
